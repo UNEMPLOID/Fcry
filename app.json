@@ -1,0 +1,75 @@
+{
+  "name": "TG File Carry  Bot",
+  "description": "file carry  bot store posts and it can access by special links",
+  "keywords": [
+    "telegram",
+    "file",
+    "carry"
+  ],
+  "repository": "https://github.com/CodeXBotz/File-Sharing-Bot",
+  "logo": "https://ibb.co/FgPVtzw",
+  "env": {
+    "TG_BOT_TOKEN": {
+      "description": "7001109625:AAHYrgpKiwZcCHN6EWRDb7S3zJLSBG9Hl24",
+      "value": "7001109625:AAHYrgpKiwZcCHN6EWRDN6EWRDb7S3zJLSBG9Hl24"
+    },
+    "OWNER_ID": {
+      "description": "5460343986",
+      "value": "5460343986"
+    },
+    "APP_ID":{
+      "description": "22247279",
+      "value": "22247279"
+    },
+    "DATABASE_URL": {
+      "description": "Paste your mongo db url",
+      "value": "url"
+    },
+    "DATABASE_NAME":{
+      "description": "Enter your DATABASE_NAME ",
+      "value": "filesharexbot"
+    },
+    "API_HASH":{
+      "description": "1994302e2d4319c92af3409c3c6dea91",
+      "value": "1994302e2d4319c92af3409c3c6dea91"
+    },
+    "CHANNEL_ID":{
+      "description": "-1002041085713",
+      "value": "-1002041085713"
+    },
+    "FORCE_SUB_CHANNEL":{
+      "description": "id of the channel or group, if you want enable force sub feature else put 0",
+      "value": "-1001685012914,-1001889705493"
+    },
+    "START_MESSAGE": {
+      "description": "Optional: start message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\nI can store private files in Specified Channel and other users can access it from special link."
+    },
+    "FORCE_SUB_MESSAGE": {
+      "description": "Optional: Force Sub message of bot, use HTML parsemode format",
+      "value": "Hello {first}\n\n<b>You need to join in my Channel/Group to use me\n\nKindly Please join Channel</b>"
+    },
+    "ADMINS": {
+      "description": "A space separated list of user_ids of Admins, they can only create links",
+      "value": "",
+      "required": false
+    },
+    "PROTECT_CONTENT": {
+      "description": "Protect contents from getting forwarded",
+      "value": "true",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
+}
+
