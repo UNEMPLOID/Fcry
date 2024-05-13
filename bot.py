@@ -32,11 +32,11 @@ class Bot(Client):
 
         if FORCE_SUB_CHANNEL:
             try:
-                link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
-                if not link:
-                    await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
-                    link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
-                self.invitelink = link
+                link = (await self.get_chat(@falcon_sec)).invite_link
+                if not link:t.me/falcon_sec
+                    await self.export_chat_invite_link(@FALCONSEC)
+                    link = (await self.get_chat(@INDIAN_HACKER_GROUP)).invite_link
+                self.invitelink = t.me/falcon_sec
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
                 self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
@@ -44,8 +44,8 @@ class Bot(Client):
                 self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/ii_hacker_ii for support")
                 sys.exit()
         try:
-            db_channel = await self.get_chat(CHANNEL_ID)
-            self.db_channel = db_channel
+            db_channel = await self.get_chat(-1002041085713)
+            self.db_channel = -1002041085713
             test = await self.send_message(chat_id = , text = "Test Message")
             await test.delete()
         except Exception as e:
